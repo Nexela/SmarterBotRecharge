@@ -1,0 +1,11 @@
+{
+  "name": "SmarterBotRecharge",
+  "version": "1.0.0",
+  "factorio_version": "0.14",
+  "title": "Smarter Bot Recharge",
+  "author": "Nexela",
+  "contact": "nexela@gmail.com",
+  "dependencies": ["base"],
+  "homepage": "",
+  "description": "Forces some waiting to recharge bots to look for new recharge locations when building additional roboports."
+}
