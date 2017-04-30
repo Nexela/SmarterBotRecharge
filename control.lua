@@ -52,9 +52,9 @@ local function on_built_roboport(event)
                     new_roboport.last_user = old_roboport.last_user
                     new_roboport.energy = old_roboport.energy
                     if event.robot then
-                        game.raise_event(defines.events.on_robot_built_entity,{created_entity=new_roboport, robot=event.robot, ignore=true})
+                        script.raise_event(defines.events.on_robot_built_entity,{created_entity=new_roboport, robot=event.robot, ignore=true})
                     else
-                        game.raise_event(defines.events.on_built_entity,{created_entity=new_roboport, player_index=event.player_index, ignore=true})
+                        script.raise_event(defines.events.on_built_entity,{created_entity=new_roboport, player_index=event.player_index, ignore=true})
                     end
                     if old_roboport.has_items_inside() then
                         for _, inv in pairs(defines.inventory) do
@@ -67,7 +67,7 @@ local function on_built_roboport(event)
                         end
                     end
                     old_roboport.surface.create_entity{name="flying-text", text="Forcing recharge", position=old_roboport.position, color = {g=1}}
-                    game.raise_event(defines.events.on_entity_died, {entity=old_roboport})
+                    script.raise_event(defines.events.on_entity_died, {entity=old_roboport})
                     old_roboport.destroy()
                 end
             end
