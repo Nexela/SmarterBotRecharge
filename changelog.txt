@@ -1,0 +1,5 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 07. 10. 2018
+  Features:
+    - Attempt to force some waiting to charge bots to look for different roboports.
